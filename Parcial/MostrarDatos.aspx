@@ -6,6 +6,7 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Mostrar Datos</title>
+    <script type="text/javascript" src="js/script.js" ></script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -29,8 +30,8 @@
             </table>
             <br />
             <br />
-            <asp:TextBox TextMode="MultiLine" runat="server"></asp:TextBox>&nbsp;
-            <asp:Button Text="Guardar" runat="server" />
+            <asp:TextBox ID="txtComentario" TextMode="MultiLine" runat="server"></asp:TextBox>&nbsp;
+            <asp:Button ID="guardar" Text="Guardar" runat="server" OnClientClick="return validarComentario()" />
         </div>
     </form>
 </body>
