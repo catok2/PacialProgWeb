@@ -50,7 +50,7 @@
 
                 <tr>
                     <td colspan="5">
-                        <asp:Button ID="btnEnviar" Text="Enviar" runat="server"/>&nbsp;
+                        <asp:Button ID="btnEnviar" Text="Enviar" runat="server" OnClientClick="return Validacion()" />&nbsp;
                         <asp:Button ID="btnLimpiar" Text="Limpiar" runat="server" OnClick="btnLimpiar_Click" />
                     </td>
                 </tr>
