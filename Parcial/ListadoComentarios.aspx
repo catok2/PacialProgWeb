@@ -12,10 +12,11 @@
         <div>
             <h2>Listado de Comentarios</h2>
             <asp:GridView ID="DataGrid" runat="server" AutoGenerateColumns="False" 
-               DataKeyNames="Id" 
+               DataKeyNames="Id"                 
                 OnRowEditing="DataGrid_RowEditing" 
                 OnRowDeleting="DataGrid_RowDeleting"
-                OnRowUpdating="DataGrid_RowUpdating">
+                OnRowUpdating="DataGrid_RowUpdating"
+                OnRowCancelingEdit="DataGrid_RowCancelingEdit">
                 
                 <Columns>
                     <asp:BoundField DataField="DNI" HeaderText="DNI" />

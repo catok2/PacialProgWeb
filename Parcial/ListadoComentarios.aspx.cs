@@ -82,7 +82,17 @@ namespace Parcial
             CargarComentarios();
 
         }
-       
+
+        protected void DataGrid_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
+        {
+            DataGrid.EditIndex = -1;
+            CargarComentarios();
+        }
+        
+
+        
+
+
 
     }
 }
