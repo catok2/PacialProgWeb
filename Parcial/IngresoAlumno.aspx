@@ -6,7 +6,7 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Ingreso Alumno</title>
-    <link rel="stylesheet" href="css/Estilos.css" />
+   <link rel="stylesheet" href="css/Estilos.css" />
     <script type="text/javascript" src="js/script.js" ></script>
 </head>
 <body>
@@ -50,7 +50,7 @@
 
                 <tr>
                     <td colspan="5">
-                        <asp:Button ID="btnEnviar" Text="Enviar" runat="server"/>&nbsp;
+                        <asp:Button ID="btnEnviar" Text="Enviar" runat="server" OnClick="btnEnviar_Click"/>&nbsp;
                         <asp:Button ID="btnLimpiar" Text="Limpiar" runat="server" OnClick="btnLimpiar_Click" />
                     </td>
                 </tr>

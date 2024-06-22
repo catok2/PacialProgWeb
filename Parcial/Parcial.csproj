@@ -44,6 +44,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Linq, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Linq.4.3.0\lib\net463\System.Linq.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -75,6 +81,8 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Exceptions.cs" />
+    <Compile Include="daoConexion.cs" />
     <Compile Include="IngresoAlumno.aspx.cs">
       <DependentUpon>IngresoAlumno.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -89,6 +97,11 @@
     <Compile Include="ListadoComentarios.aspx.designer.cs">
       <DependentUpon>ListadoComentarios.aspx</DependentUpon>
     </Compile>
+    <Compile Include="parcialtoSql.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>parcialtoSql.dbml</DependentUpon>
+    </Compile>
     <Compile Include="MostrarDatos.aspx.cs">
       <DependentUpon>MostrarDatos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -99,6 +112,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="parcialtoSql.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>parcialtoSql.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="parcialtoSql.dbml.layout">
+      <DependentUpon>parcialtoSql.dbml</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -108,6 +129,9 @@
     </None>
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

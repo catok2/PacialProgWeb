@@ -9,28 +9,32 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <h1>Datos</h1>
-            <table border="1">
+      <div>
+            <h1>Datos del Alumno</h1>
+            <table>
                 <tr>
-                    <td>Apellido</td>
-                    <td>Nombre</td>
-                    <td>DNI</td>
-                    <td>E-mail</td>
-                    <td>Turno</td>
+                    <td>Apellido:</td>
+                    <td><asp:Label ID="lblApellido" runat="server"></asp:Label></td>
                 </tr>
                 <tr>
-                    <td><asp:Label Text="" runat="server"></asp:Label></td>
-                    <td><asp:Label Text="" runat="server"></asp:Label></td>
-                    <td><asp:Label Text="" runat="server"></asp:Label></td>
-                    <td><asp:Label Text="" runat="server"></asp:Label></td>
-                    <td><asp:Label Text="" runat="server"></asp:Label></td>
+                    <td>Nombre:</td>
+                    <td><asp:Label ID="lblNombre" runat="server"></asp:Label></td>
+                </tr>
+                <tr>
+                    <td>DNI:</td>
+                    <td><asp:Label ID="lblDNI" runat="server"></asp:Label></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><asp:Label ID="lblEmail" runat="server"></asp:Label></td>
+                </tr>
+                <tr>
+                    <td>Turno:</td>
+                    <td><asp:Label ID="lblTurno" runat="server"></asp:Label></td>
                 </tr>
             </table>
-            <br />
-            <br />
-            <asp:TextBox TextMode="MultiLine" runat="server"></asp:TextBox>&nbsp;
-            <asp:Button Text="Guardar" runat="server" />
+            <asp:TextBox ID="txtComentario" runat="server" TextMode="MultiLine"></asp:TextBox><br />
+            <asp:Button ID="btnGuardarComentario" runat="server" Text="Guardar Comentario" OnClick="btnGuardarComentario_Click"/>
         </div>
     </form>
 </body>

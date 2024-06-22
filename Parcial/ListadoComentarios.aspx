@@ -8,8 +8,29 @@
     <title></title>
 </head>
 <body>
-    <form id="form1" runat="server">
+<form id="form1" runat="server">
         <div>
+            <h2>Listado de Comentarios</h2>
+            <asp:GridView ID="DataGrid" runat="server" AutoGenerateColumns="False" 
+               DataKeyNames="Id" 
+                OnRowEditing="DataGrid_RowEditing" 
+                OnRowDeleting="DataGrid_RowDeleting"
+                OnRowUpdating="DataGrid_RowUpdating">
+                
+                <Columns>
+                    <asp:BoundField DataField="DNI" HeaderText="DNI" />
+                    <asp:BoundField DataField="Apellido" HeaderText="Apellido" />
+                     <asp:TemplateField HeaderText="Comentario">
+                        <ItemTemplate>
+                            <%# Eval("Comentario") %>
+                        </ItemTemplate>
+                        <EditItemTemplate>
+                            <asp:TextBox ID="txtComentario" runat="server" Text='<%# Bind("Comentario") %>' />
+                        </EditItemTemplate>
+                    </asp:TemplateField>
+                    <asp:CommandField ShowEditButton="True" ShowDeleteButton="True" />
+                </Columns>
+            </asp:GridView>
         </div>
     </form>
 </body>

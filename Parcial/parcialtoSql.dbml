@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="parcial" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="dbo.alumnos" Member="alumnos">
+    <Type Name="alumnos">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Apellido" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="DNI" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Turno" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Association Name="alumnos_comentarios" Member="comentarios" ThisKey="Id" OtherKey="AlumnoId" Type="comentarios" />
+    </Type>
+  </Table>
+  <Table Name="dbo.comentarios" Member="comentarios">
+    <Type Name="comentarios">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DNI" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Apellido" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Comentario" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="AlumnoId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="alumnos_comentarios" Member="alumnos" ThisKey="AlumnoId" OtherKey="Id" Type="alumnos" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
