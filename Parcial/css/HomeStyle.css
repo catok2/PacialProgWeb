@@ -1,0 +1,17 @@
+﻿#cuadro{
+    height: 50px;
+    width: 400px;
+    background-color: darksalmon;
+    border-width: 3px;
+    border-style: solid;
+    border-color: crimson;
+    padding:20px;
+    border-radius: 5px;
+    margin:20px;
+}
+
+
+#btnAdmin, #btnIngreso{
+    margin:10px;
+    font-size: 15px;
+}

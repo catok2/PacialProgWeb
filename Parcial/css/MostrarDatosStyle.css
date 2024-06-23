@@ -1,0 +1,14 @@
+﻿table{
+    text-align:center;
+    
+}
+
+h1, th{
+    color: crimson;
+}
+
+#btnGuardarComentario{
+    border-radius: 5px;
+    font-weight: 5px;
+}
+
