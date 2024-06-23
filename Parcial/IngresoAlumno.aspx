@@ -41,21 +41,23 @@
                     <td colspan="3">
                         <asp:DropDownList ID="opciones" Class="desenfocada" runat="server">
                             <asp:ListItem Value="" Selected="True">Seleccione Turno</asp:ListItem>
-                            <asp:ListItem Value="tm">Mañana</asp:ListItem>
-                            <asp:ListItem Value="tt">Tarde</asp:ListItem>
-                            <asp:ListItem Value="tn">Noche</asp:ListItem>
+                            <asp:ListItem Value="Mañana">Mañana</asp:ListItem>
+                            <asp:ListItem Value="Tarde">Tarde</asp:ListItem>
+                            <asp:ListItem Value="Noche">Noche</asp:ListItem>
                         </asp:DropDownList>
                     </td>
                 </tr>
 
                 <tr>
                     <td colspan="5">
-                        <asp:Button ID="btnEnviar" Text="Enviar" runat="server" OnClick="btnEnviar_Click"/>&nbsp;
+                        <asp:Button ID="btnEnviar" Text="Enviar" runat="server" OnClick="btnEnviar_Click" OnClientClick="return Validacion()"/>&nbsp;
                         <asp:Button ID="btnLimpiar" Text="Limpiar" runat="server" OnClick="btnLimpiar_Click" />
                     </td>
                 </tr>
 
             </table>
+            <br />
+            <asp:HyperLink Text="Volver a inicio" runat="server" NavigateUrl="Home.aspx" />
         </div>
  
     </form>
