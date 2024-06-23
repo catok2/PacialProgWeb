@@ -6,12 +6,15 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Inicio</title>
+    <link rel="stylesheet" href="css/HomeStyle.css" />
 </head>
 <body>
     <form id="form1" runat="server">
         <div align="center">
-            <asp:Button runat="server" Text="Ingreso Alumnos" PostBackUrl="~/IngresoAlumno.aspx" />&nbsp;
-            <asp:Button runat="server" Text="Administrador de comentarios" PostBackUrl="~/ListadoComentarios.aspx" />
+            <div id="cuadro">
+                <asp:Button ID="btnIngreso" runat="server" Text="Ingreso Alumnos" PostBackUrl="~/IngresoAlumno.aspx" />&nbsp;
+                <asp:Button ID="btnAdmin" runat="server" Text="Administrador de comentarios" PostBackUrl="~/ListadoComentarios.aspx" />
+            </div>
         </div>
     </form>
 </body>
