@@ -1,5 +1,5 @@
 ﻿function validarNombre(nombre) {
-    var exprReg = /^[a-zA-Z]+$/;
+    var exprReg = /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/; //permite el ingreso de letras minúsculas, mayúsculas, vocales con acentos y la "n"/"Ñ".
     if (!(exprReg.test(nombre))) {
         window.alert("Campo Nombre incorrecto. Solo se permiten letras.");
         return false;
@@ -9,7 +9,7 @@
 }
 
 function validarApellido(apellido) {
-    var exprReg = /^[a-zA-Z]+$/;
+    var exprReg = /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/;
     if (!(exprReg.test(apellido))) {
         window.alert("Campo Apellido incorrecto. Solo se permiten letras.");
         return false;
