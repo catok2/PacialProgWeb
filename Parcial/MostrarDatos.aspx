@@ -15,11 +15,11 @@
             <h1>Datos del Alumno</h1>
             <table border="1" id="tabla">
                 <tr>
-                    <td>Apellido</td>
-                    <td>Nombre</td>
-                    <td>DNI</td>
-                    <td>Email</td>
-                    <td>Turno</td>
+                    <th>Apellido</th>
+                    <th>Nombre</th>
+                    <th>DNI</th>
+                    <th>Email</th>
+                    <th>Turno</th>
     
                 </tr>
                 <tr>
