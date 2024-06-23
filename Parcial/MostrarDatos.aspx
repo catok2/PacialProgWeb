@@ -7,12 +7,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Mostrar Datos</title>
     <script type="text/javascript" src="js/script.js" ></script>
+    <link rel="stylesheet" href="css/MostrarDatosStyle.css" />
 </head>
 <body>
     <form id="form1" runat="server">
-      <div>
+      <div align="center">
             <h1>Datos del Alumno</h1>
-            <table border="1">
+            <table border="1" id="tabla">
                 <tr>
                     <td>Apellido</td>
                     <td>Nombre</td>
