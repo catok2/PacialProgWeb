@@ -49,7 +49,7 @@
                 </tr>
 
                 <tr>
-                    <td colspan="5">
+                    <td colspan="5" align="right">
                         <asp:Button ID="btnEnviar" Text="Enviar" runat="server" OnClick="btnEnviar_Click" OnClientClick="return Validacion()"/>&nbsp;
                         <asp:Button ID="btnLimpiar" Text="Limpiar" runat="server" OnClick="btnLimpiar_Click" />
                     </td>
@@ -57,7 +57,7 @@
 
             </table>
             <br />
-            <asp:HyperLink Text="Volver a inicio" runat="server" NavigateUrl="Home.aspx" />
+            <asp:HyperLink Text="Volver al Inicio" runat="server" NavigateUrl="Home.aspx" />
         </div>
  
     </form>
